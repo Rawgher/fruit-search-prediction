@@ -6,7 +6,7 @@ const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackb
 // this function is used to search through the fruit array after someone has started typing in the input box
 function search(str) {
 	// filtering the fruit array using what the user has input and adding .toLowerCase to make it case-insensitive
-	let results = fruit.filter((el) => el.toLowerCase().includes(str.toLowerCase()));
+	const results = fruit.filter((el) => el.toLowerCase().includes(str.toLowerCase()));
 
 	// passing the new array of results and what the user input to the showSuggestions function 
 	showSuggestions(results, str)
@@ -37,7 +37,7 @@ function showSuggestions(results, inputVal) {
 			const newLi = document.createElement('li');
 
 			// running a helper function to bold any letters that match the users input
-			let boldFruit = boldMatchingCharacters(fruit, inputVal)
+			const boldFruit = boldMatchingCharacters(fruit, inputVal)
 
 			// adding this new bolded text to the li
 			newLi.innerHTML = boldFruit
